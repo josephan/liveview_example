@@ -2,18 +2,18 @@ defmodule ExampleWeb.ModalLive do
   use Phoenix.LiveView
 
   def render(assigns) do
-    # Phoenix.View.render(ExampleWeb.PageView, "modal.html", assigns)
+    Phoenix.View.render(ExampleWeb.PageView, "modal.html", assigns)
 
-    ~L"""
-    <%= if @show_modal do %>
-      <div id="modal">
-        <div id="modal-content">
-          <p>Phoenix Live View rocks!</p>
-          <button phx-click="hide_modal">Close</button>
-        </div>
-      </div>
-    <% end %>
-    """
+    # ~L"""
+    # <%= if @show_modal do %>
+    #   <div id="modal">
+    #     <div id="modal-content">
+    #       <p>Phoenix Live View rocks!</p>
+    #       <button phx-click="hide_modal">Close</button>
+    #     </div>
+    #   </div>
+    # <% end %>
+    # """
   end
 
   def mount(_params, _session, socket) do
