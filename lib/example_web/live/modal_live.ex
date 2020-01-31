@@ -2,8 +2,10 @@ defmodule ExampleWeb.ModalLive do
   use Phoenix.LiveView
 
   def render(assigns) do
+    # Using a .leex template file below does not hide the modal
     Phoenix.View.render(ExampleWeb.PageView, "modal.html", assigns)
 
+    # Using ~L sigil hides the modal
     # ~L"""
     # <%= if @show_modal do %>
     #   <div id="modal">
