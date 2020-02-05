@@ -32,6 +32,12 @@ Hooks.OpenNotifications = {
   }
 }
 
+// Issue occurs even when not using Hooks
+// document.getElementById("notifications-toggle").addEventListener('click', e => {
+//   let list = document.getElementById('notifications-list');
+//   list.style.visibility = 'visible';
+// })
+
 let liveSocket = new LiveSocket('/live', Socket, {
   hooks: Hooks,
   params: {_csrf_token: csrfToken},
